@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity">
+
+        <RelativeLayout
+            android:id="@+id/no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:text="@string/no_account_details_found"
+                android:textAlignment="textStart"
+                android:textColor="#333333"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textAlignment="textStart"
+            android:textColor="#383838"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/credentials_manager"
+            app:titleTextColor="@color/black" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E8E8E8"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchView"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="15dp"
+            app:boxCornerRadiusBottomEnd="@dimen/_6sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_6sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_6sdp"
+            app:boxCornerRadiusTopStart="@dimen/_6sdp"
+            app:boxStrokeColor="#383838"
+            app:boxStrokeWidth="1dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:hintTextColor="#ABABAB"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/view">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableEnd="@drawable/ic_search_icon"
+                android:fontFamily="@font/lato"
+                android:hint="@string/search_view_video_hint"
+                android:inputType="text"
+                android:padding="0dp"
+                android:textFontWeight="400"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/searchView"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_password_layout" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:contentDescription="@string/add"
+            android:src="@drawable/baseline_add_24"
+            app:backgroundTint="#3F7DE3"
+            app:fabSize="auto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

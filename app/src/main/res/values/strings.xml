@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Credentials Manager</string>
+    <string name="google">Google</string>
+    <string name="star">******</string>
+    <string name="no_account_details_found">No account details found</string>
+    <string name="add">add</string>
+    <string name="account_name">Account Name</string>
+    <string name="username">Username/ Email</string>
+    <string name="password">Password</string>
+    <string name="date">Date</string>
+    <string name="add_new_account">Add New Account</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="update">Update</string>
+    <string name="account_details">Account Details</string>
+    <string name="credentials_manager">Credentials Manager</string>
+
+    <string name="them">Theme</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="system_default">System default</string>
+    <string name="cancel">CANCEL</string>
+    <string name="ok">Ok</string>
+    <string name="the_only_key_you_ll_ever_need">The only key you\'ll ever need....</string>
+    <string name="search_view_video_hint">Search account type...</string>
+</resources>

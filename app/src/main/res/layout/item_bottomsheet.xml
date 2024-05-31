@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="70dp"
+                android:layout_height="5dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="#E3E3E3" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/logoRv"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/ed_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_rect"
+                android:hint="@string/account_name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#CCCCCC" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/shape_rect"
+                android:hint="@string/username"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#CCCCCC" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/shape_rect"
+                android:hint="@string/password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#CCCCCC" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/strengthTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Need to change password on perticular date? Set date below "
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_rect"
+                android:hint="@string/date"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#CCCCCC" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="#2C2C2C"
+                android:text="@string/add_new_account"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textFontWeight="700"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
